@@ -16,11 +16,6 @@
 		030FF27C18F3FE3800D0EA65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030FF27A18F3FE3800D0EA65 /* Main.storyboard */; };
 		030FF27F18F3FE3800D0EA65 /* RCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 030FF27E18F3FE3800D0EA65 /* RCViewController.m */; };
 		030FF28118F3FE3800D0EA65 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030FF28018F3FE3800D0EA65 /* Images.xcassets */; };
-		030FF28818F3FE3800D0EA65 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030FF28718F3FE3800D0EA65 /* XCTest.framework */; };
-		030FF28918F3FE3800D0EA65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030FF26818F3FE3800D0EA65 /* Foundation.framework */; };
-		030FF28A18F3FE3800D0EA65 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030FF26C18F3FE3800D0EA65 /* UIKit.framework */; };
-		030FF29218F3FE3800D0EA65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 030FF29018F3FE3800D0EA65 /* InfoPlist.strings */; };
-		030FF29418F3FE3800D0EA65 /* RaceControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 030FF29318F3FE3800D0EA65 /* RaceControlTests.m */; };
 		030FF2A518F4052900D0EA65 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 030FF2A218F4052900D0EA65 /* SVProgressHUD.bundle */; };
 		030FF2A618F4052900D0EA65 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 030FF2A418F4052900D0EA65 /* SVProgressHUD.m */; };
 		030FF2A918F4054A00D0EA65 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 030FF2A818F4054A00D0EA65 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -143,7 +138,6 @@
 		03F0B67619190866004D4AFC /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 03F0B67519190866004D4AFC /* screen.png */; };
 		03FC2953191DEF600079B346 /* RCTermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FC2952191DEF600079B346 /* RCTermsViewController.m */; };
 		29CE27762B77E77C85E1A15B /* libPods-RaceControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E162617F1B4BD0AC009C45F /* libPods-RaceControl.a */; };
-		7BE0E0E9F28F58A39FEB5145 /* libPods-RaceControlTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E68E58F7F22D8AFDC8261A53 /* libPods-RaceControlTests.a */; };
 		8B037CD71928B277000DE081 /* RCInviteFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B037CD61928B277000DE081 /* RCInviteFriendViewController.m */; };
 		8B037CD91928B568000DE081 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B037CD81928B568000DE081 /* MessageUI.framework */; };
 		8B06EBF219459ACC00BC7C93 /* login_button.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8B06EBEE19459ACC00BC7C93 /* login_button.jpg */; };
@@ -191,16 +185,6 @@
 		C45CA9261998F57300917EFB /* spotter_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C45CA9241998F57300917EFB /* spotter_logo@2x.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		030FF28B18F3FE3800D0EA65 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 030FF25D18F3FE3800D0EA65 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 030FF26418F3FE3800D0EA65;
-			remoteInfo = RaceControl;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		030FF26518F3FE3800D0EA65 /* SPOTTER!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SPOTTER!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		030FF26818F3FE3800D0EA65 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -216,7 +200,6 @@
 		030FF27D18F3FE3800D0EA65 /* RCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCViewController.h; sourceTree = "<group>"; };
 		030FF27E18F3FE3800D0EA65 /* RCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCViewController.m; sourceTree = "<group>"; };
 		030FF28018F3FE3800D0EA65 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		030FF28618F3FE3800D0EA65 /* RaceControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RaceControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		030FF28718F3FE3800D0EA65 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		030FF28F18F3FE3800D0EA65 /* RaceControlTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RaceControlTests-Info.plist"; sourceTree = "<group>"; };
 		030FF29118F3FE3800D0EA65 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -560,17 +543,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		030FF28318F3FE3800D0EA65 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				030FF28818F3FE3800D0EA65 /* XCTest.framework in Frameworks */,
-				030FF28A18F3FE3800D0EA65 /* UIKit.framework in Frameworks */,
-				030FF28918F3FE3800D0EA65 /* Foundation.framework in Frameworks */,
-				7BE0E0E9F28F58A39FEB5145 /* libPods-RaceControlTests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -589,7 +561,6 @@
 			isa = PBXGroup;
 			children = (
 				030FF26518F3FE3800D0EA65 /* SPOTTER!.app */,
-				030FF28618F3FE3800D0EA65 /* RaceControlTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1223,26 +1194,6 @@
 			productReference = 030FF26518F3FE3800D0EA65 /* SPOTTER!.app */;
 			productType = "com.apple.product-type.application";
 		};
-		030FF28518F3FE3800D0EA65 /* RaceControlTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 030FF29A18F3FE3800D0EA65 /* Build configuration list for PBXNativeTarget "RaceControlTests" */;
-			buildPhases = (
-				021785642DB80982700AB1F4 /* Check Pods Manifest.lock */,
-				030FF28218F3FE3800D0EA65 /* Sources */,
-				030FF28318F3FE3800D0EA65 /* Frameworks */,
-				030FF28418F3FE3800D0EA65 /* Resources */,
-				65E900635A4567D3E4539292 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				030FF28C18F3FE3800D0EA65 /* PBXTargetDependency */,
-			);
-			name = RaceControlTests;
-			productName = RaceControlTests;
-			productReference = 030FF28618F3FE3800D0EA65 /* RaceControlTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1267,7 +1218,6 @@
 			projectRoot = "";
 			targets = (
 				030FF26418F3FE3800D0EA65 /* RaceControl */,
-				030FF28518F3FE3800D0EA65 /* RaceControlTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1347,14 +1297,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		030FF28418F3FE3800D0EA65 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				030FF29218F3FE3800D0EA65 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -1371,36 +1313,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		021785642DB80982700AB1F4 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		65E900635A4567D3E4539292 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RaceControlTests/Pods-RaceControlTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9733027A862CFE1612F270F1 /* Copy Pods Resources */ = {
@@ -1522,23 +1434,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		030FF28218F3FE3800D0EA65 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				030FF29418F3FE3800D0EA65 /* RaceControlTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		030FF28C18F3FE3800D0EA65 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 030FF26418F3FE3800D0EA65 /* RaceControl */;
-			targetProxy = 030FF28B18F3FE3800D0EA65 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		030FF27118F3FE3800D0EA65 /* InfoPlist.strings */ = {
@@ -1619,23 +1515,6 @@
 			};
 			name = Release;
 		};
-		030FF29C18F3FE3800D0EA65 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 803B5B4E6E53A3F2749C1E9E /* Pods-RaceControlTests.release.xcconfig */;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RaceControl/RaceControl-Prefix.pch";
-				INFOPLIST_FILE = "RaceControlTests/RaceControlTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 		FE0725381AC01F2E00F56D49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1687,23 +1566,6 @@
 			};
 			name = Debug;
 		};
-		FE07253A1AC01F2E00F56D49 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 803B5B4E6E53A3F2749C1E9E /* Pods-RaceControlTests.release.xcconfig */;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RaceControl/RaceControl-Prefix.pch";
-				INFOPLIST_FILE = "RaceControlTests/RaceControlTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1721,15 +1583,6 @@
 			buildConfigurations = (
 				030FF29918F3FE3800D0EA65 /* Release */,
 				FE0725391AC01F2E00F56D49 /* Debug */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		030FF29A18F3FE3800D0EA65 /* Build configuration list for PBXNativeTarget "RaceControlTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				030FF29C18F3FE3800D0EA65 /* Release */,
-				FE07253A1AC01F2E00F56D49 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
