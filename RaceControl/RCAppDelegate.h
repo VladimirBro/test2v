@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
+//#import <CoreLocation/CoreLocation.h>
 #import <FacebookSDK/FacebookSDK.h>
+@import CoreLocation;
 
 @interface RCAppDelegate : UIResponder <UIApplicationDelegate, CLLocationManagerDelegate, PNDelegate>
 

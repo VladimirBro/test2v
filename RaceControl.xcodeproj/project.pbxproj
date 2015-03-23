@@ -1509,6 +1509,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RaceControl/RaceControl-Prefix.pch";
 				INFOPLIST_FILE = "RaceControl/RaceControl-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "SPOTTER!";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -1560,6 +1561,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RaceControl/RaceControl-Prefix.pch";
 				INFOPLIST_FILE = "RaceControl/RaceControl-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "SPOTTER!";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;

@@ -15,7 +15,9 @@
 @interface RCSplashViewController ()
 
 @property (nonatomic, strong) id <FBGraphUser> fbUserData;
+
 @end
+
 
 @implementation RCSplashViewController
 
@@ -28,28 +30,30 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
+    if([UIScreen mainScreen].bounds.size.height > 500)
+        splashImage.image =[UIImage imageNamed:@"Default-568h@2x.png"];
+    
     [super viewDidLoad];
-    isLoaded = TRUE;
-	// Do any additional setup after loading the view.
+    
     self.navigationController.navigationBar.tintColor=[UIColor whiteColor];
+    
+    isLoaded = TRUE;
 }
 
--(void)viewWillAppear:(BOOL)animated {
+
+-(void)viewWillAppear:(BOOL)animated
+{
     UINavigationBar* navigationBar = self.navigationController.navigationBar;
     [navigationBar setBarTintColor:BLACK_COLOR];
     [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     [navigationBar setTranslucent:NO];
     
-    // hide navigation bar
     self.navigationController.navigationBarHidden=YES;
-    
-    if([UIScreen mainScreen].bounds.size.height > 500)
-        splashImage.image =[UIImage imageNamed:@"Default-568h@2x.png"];
-    else
-        splashImage.image = [UIImage imageNamed:@"Default.png"];
 }
+
 
 -(void)viewDidAppear:(BOOL)animated
 {
@@ -65,34 +69,37 @@
 }
 
 
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-#pragma mark
-#pragma mark -Orientation Handling
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+#pragma mark - Orientation Handling
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
 
 - (BOOL)shouldAutorotate  // iOS 6 autorotation fix
 {
     return YES;
 }
 
+
 - (NSUInteger)supportedInterfaceOrientations // iOS 6 autorotation fix
 {
     return UIInterfaceOrientationMaskPortrait;
 }
 
+
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation // iOS 6 autorotation fix
 {
     return UIInterfaceOrientationPortrait;
 }
+
 
 #pragma mark - Facebook Login Management
 
@@ -201,7 +208,8 @@
     
 }
 
-- (void) makeRequestForUserData {
+- (void) makeRequestForUserData
+{
     [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         if (!error) {
             // Success! Include your code to handle the results here
@@ -218,7 +226,8 @@
 
 
 #pragma mark - Call Login API
-- (void) verifyFBLoginStatus:(id<FBGraphUser>) user {
+- (void) verifyFBLoginStatus:(id<FBGraphUser>) user
+{
     //assign user data to object
     _fbUserData = user;
     
@@ -243,7 +252,8 @@
 }
 
 
-- (void)requestFinished:(ASIHTTPRequest *)request {
+- (void)requestFinished:(ASIHTTPRequest *)request
+{
     //NSLog(@"Request finished");
     [SVProgressHUD dismiss];
     
@@ -268,7 +278,9 @@
     }
 }
 
-- (void)requestFailed:(ASIHTTPRequest *)request {
+
+- (void)requestFailed:(ASIHTTPRequest *)request
+{
     NSString *response = [request responseString];
     id respJSON = [response JSONValue];
     //NSLog(@"respJSON = %@", respJSON);
@@ -283,7 +295,9 @@
 
 
 #pragma mark - Prepare for segue
-- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     if ([[segue identifier] isEqualToString:SEGUE_ID_FBSignUpFromSplash]) {
         RCFacebookSignUpViewController *viewController = (RCFacebookSignUpViewController *) [segue destinationViewController];
         viewController.fbUserData = _fbUserData;
