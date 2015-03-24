@@ -17,4 +17,7 @@
     #import "RCSupport.h"
     #import "SVProgressHUD.h"
     #import "PNImports.h"
+
+    #define DELEGATE ((RCAppDelegate *)[[UIApplication sharedApplication] delegate])
+
 #endif

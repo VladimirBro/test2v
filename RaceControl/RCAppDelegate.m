@@ -21,7 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [NewRelicAgent startWithApplicationToken:@"be32e34d5441fd5451a9a45e21ef6e370102c5ec"];
+//    [NewRelicAgent startWithApplicationToken:@"be32e34d5441fd5451a9a45e21ef6e370102c5ec"];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
