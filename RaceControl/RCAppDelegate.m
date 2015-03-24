@@ -243,10 +243,8 @@
     self.locationMgr.delegate = self;
     self.locationMgr.distanceFilter = 20000000;
     
-    if ([self.locationMgr respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-        printf("[requestWhenInUseAuthorization]\n");
+    if ([self.locationMgr respondsToSelector:@selector(requestWhenInUseAuthorization)])
         [self.locationMgr requestWhenInUseAuthorization];
-    }
     
     [self.locationMgr startUpdatingLocation];
     
@@ -305,7 +303,6 @@
 
 - (void)locationManager:(CLLocationManager*)manager didUpdateLocations:(NSArray *)_locations
 {
-    printf("Location MAnager is work\n");
     self.location = [_locations lastObject];
     NSLog(@"Locations AppDelegate: %@", self.location);
 }
