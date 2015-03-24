@@ -44,17 +44,29 @@
 //#define API_ACKNOWLEDGEMENT @"http://spotter-ci-qpemczmudb.elasticbeanstalk.com/spotter/ack"
 //#define API_TRACK_FEEDS     @"http://mruniverse-ci.elasticbeanstalk.com/trackfeeds"
 
+//Development Server URLs
+#define API_USER_REGISTER   @"http://spotter-ci-qpemczmudb.elasticbeanstalk.com/users"
+#define API_USER_LOGIN      @"http://spotter-ci-qpemczmudb.elasticbeanstalk.com/users/auth"
+#define API_USER_LOGOUT     @"http://spotter-ci-qpemczmudb.elasticbeanstalk.com/users/auth"
+#define API_GET_TRACK       @"http://spotter-ci-qpemczmudb.elasticbeanstalk.com/spotter/nearesttrack"
+#define API_GET_EVENT       @"http://spotter-ci-qpemczmudb.elasticbeanstalk.com/spotter/getevents"
+#define API_GET_FEED        @"http://spotter-ci-qpemczmudb.elasticbeanstalk.com/feed/getfeed"
+#define API_SAVE_PURCHASE   @"http://spotter-ci-qpemczmudb.elasticbeanstalk.com/users/savepurchase"
+#define API_VERIFY_PURCHASE @"http://spotter-ci-qpemczmudb.elasticbeanstalk.com/users/pro"
+#define API_ACKNOWLEDGEMENT @"http://spotter-ci-qpemczmudb.elasticbeanstalk.com/spotter/ack"
+#define API_TRACK_FEEDS     @"http://mruniverse-ci.elasticbeanstalk.com/trackfeeds"
+
 // Production Server URLs
-#define API_USER_REGISTER   @"http://spotterservice-env.elasticbeanstalk.com/users"
-#define API_USER_LOGIN      @"http://spotterservice-env.elasticbeanstalk.com/users/auth"
-#define API_USER_LOGOUT     @"http://spotterservice-env.elasticbeanstalk.com/users/auth"
-#define API_GET_TRACK       @"http://spotterservice-env.elasticbeanstalk.com/spotter/nearesttrack"
-#define API_GET_EVENT       @"http://spotterservice-env.elasticbeanstalk.com/spotter/getevents"
-#define API_GET_FEED        @"http://spotterservice-env.elasticbeanstalk.com/feed/getfeed"
-#define API_SAVE_PURCHASE   @"http://spotterservice-env.elasticbeanstalk.com/users/savepurchase"
-#define API_VERIFY_PURCHASE @"http://spotterservice-env.elasticbeanstalk.com/users/pro"
-#define API_ACKNOWLEDGEMENT @"http://spotterservice-env.elasticbeanstalk.com/spotter/ack"
-#define API_TRACK_FEEDS     @"http://mruniverse-env.elasticbeanstalk.com/trackfeeds"
+//#define API_USER_REGISTER   @"http://spotterservice-env.elasticbeanstalk.com/users"
+//#define API_USER_LOGIN      @"http://spotterservice-env.elasticbeanstalk.com/users/auth"
+//#define API_USER_LOGOUT     @"http://spotterservice-env.elasticbeanstalk.com/users/auth"
+//#define API_GET_TRACK       @"http://spotterservice-env.elasticbeanstalk.com/spotter/nearesttrack"
+//#define API_GET_EVENT       @"http://spotterservice-env.elasticbeanstalk.com/spotter/getevents"
+//#define API_GET_FEED        @"http://spotterservice-env.elasticbeanstalk.com/feed/getfeed"
+//#define API_SAVE_PURCHASE   @"http://spotterservice-env.elasticbeanstalk.com/users/savepurchase"
+//#define API_VERIFY_PURCHASE @"http://spotterservice-env.elasticbeanstalk.com/users/pro"
+//#define API_ACKNOWLEDGEMENT @"http://spotterservice-env.elasticbeanstalk.com/spotter/ack"
+//#define API_TRACK_FEEDS     @"http://mruniverse-env.elasticbeanstalk.com/trackfeeds"
 
 
 #define API_TERMS_CONDITION @"http://www.spotter.com.s3-website-us-east-1.amazonaws.com/agreement.html"
@@ -95,7 +107,7 @@
 #define SKU_YEARLY @"oneyear"
 
 // distance radius
-#define DISTANCE_RADIUS @"50"
+#define DISTANCE_RADIUS @"20000" //DISTANCE_RADIUS @"50"
 
 // Color
 #define grayColor           [[UIColor lightGrayColor] CGColor]

@@ -17,4 +17,5 @@
     IBOutlet UIButton *registerBtn;
     BOOL isLoaded;
 }
+
 @end

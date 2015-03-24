@@ -12,15 +12,16 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import <NewRelicAgent/NewRelic.h>
 
+
 @implementation RCAppDelegate
-@synthesize location,locationMgr,isLocationFetched,isConnectionLost;
+@synthesize isLocationFetched, isConnectionLost;
 @synthesize purchaseInitiated,isPro,isConsumed;
 @synthesize userDictionary;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [NewRelicAgent startWithApplicationToken:@"be32e34d5441fd5451a9a45e21ef6e370102c5ec"];
+//    [NewRelicAgent startWithApplicationToken:@"be32e34d5441fd5451a9a45e21ef6e370102c5ec"];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
@@ -28,16 +29,15 @@
 	[[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert|
 																		   UIRemoteNotificationTypeSound|
 																		   UIRemoteNotificationTypeBadge)];
+    
 	/****************************************************************************/
     
     //pubnub configuration
     [PubNub setDelegate:self];
     [self initPubnub];
-    isLocationFetched = FALSE;
+    isLocationFetched = TRUE;
     isConnectionLost = FALSE;
-    locationMgr=[[CLLocationManager alloc] init];
-    [locationMgr startUpdatingLocation];
-    [locationMgr setDelegate:self];
+    self.locationMgr = [[CLLocationManager alloc] init];
     
     /*
     NSDictionary *_dict =[launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
@@ -67,6 +67,7 @@
 //        [loginButton setTitle:@"Log in with Facebook" forState:UIControlStateNormal];
 //    }
 
+    [self startStandardUpdates];
     
     return YES;
 }
@@ -238,6 +239,17 @@
 #pragma mark -
 #pragma mark Location Manager functions
 
+- (void)startStandardUpdates {
+    self.locationMgr.delegate = self;
+    self.locationMgr.distanceFilter = 20000000;
+    
+    if ([self.locationMgr respondsToSelector:@selector(requestWhenInUseAuthorization)])
+        [self.locationMgr requestWhenInUseAuthorization];
+    
+    [self.locationMgr startUpdatingLocation];
+    
+}
+
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
@@ -255,7 +267,7 @@
         isLocationFetched = FALSE;
         NSLog(@"GPS fetching restricted..");
     }
-     */
+   */
 }
 
 
@@ -276,9 +288,9 @@
 		//NSLog(@"cached location is coming so ignoring ....");
 		return;
 	}
-	location = newLocation;
+	self.location = newLocation;
     isLocationFetched = TRUE;
-	//[locationMgr stopUpdatingLocation];
+	[self.locationMgr stopUpdatingLocation];
 }
 
 
@@ -286,12 +298,16 @@
 {
 	NSLog(@"ERROR %@",error);
     isLocationFetched = FALSE;
-	//[locationMgr stopUpdatingLocation];
+	[self.locationMgr stopUpdatingLocation];
 }
 
+- (void)locationManager:(CLLocationManager*)manager didUpdateLocations:(NSArray *)_locations
+{
+    self.location = [_locations lastObject];
+    NSLog(@"Locations AppDelegate: %@", self.location);
+}
 
-
-
+#pragma mark
 
 -(void) subscribeToChannel:(NSString *)channelName
 {
@@ -328,7 +344,7 @@
 
 
 
-#pragma pubnub delegate
+#pragma mark - pubnub delegate
 
 - (void)pubnubClient:(PubNub *)client didReceivePushNotificationEnabledChannels:(NSArray *)channels {
     
