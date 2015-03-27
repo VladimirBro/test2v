@@ -185,13 +185,33 @@
                        appDelegate.location.coordinate.longitude,//37.85307831130922f,
                        DISTANCE_RADIUS,
                        accessToken]];
-        //NSLog(@"URL : %@",[url absoluteString]);
+        NSLog(@"fetchTrack=URL : %@",[url absoluteString]);
         fetchTrackRequest=[ASIFormDataRequest requestWithURL:url];
         [fetchTrackRequest setDelegate:self];
         [fetchTrackRequest setRequestMethod:@"GET"];
         [fetchTrackRequest startAsynchronous];
+        
+        /*
+        [self updateTracks];
+         */
     }
 }
+
+
+#pragma mark - for testing UPDATE_TRACKS
+- (void) updateTracks {
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"PLEASE_WAIT", nil) maskType:SVProgressHUDMaskTypeBlack];
+    NSString * UPDATE_TRACKS = @"http://spotter-ci-qpemczmudb.elasticbeanstalk.com/spotter/updatetracks";
+    NSNumber * spotterkey = [NSNumber numberWithInt:1212];
+    NSURL * url = [NSURL URLWithString:[NSString stringWithFormat:
+                                        @"%@?spotterkey=%@", UPDATE_TRACKS, spotterkey]];
+    NSLog(@"fetchTrack=URL : %@",[url absoluteString]);
+    fetchTrackRequest=[ASIFormDataRequest requestWithURL:url];
+    [fetchTrackRequest setDelegate:self];
+    [fetchTrackRequest setRequestMethod:@"GET"];
+    [fetchTrackRequest startAsynchronous];
+}
+#pragma mark
 
 
 - (void)fetchEvent:(NSString*)_trackId
@@ -209,7 +229,7 @@
                        appDelegate.location.coordinate.longitude,//37.85307831130922f,
                        _trackId,
                        accessToken]];
-        //NSLog(@"URL : %@",[url absoluteString]);
+        NSLog(@"URL : %@",[url absoluteString]);
         fetchEventRequest=[ASIFormDataRequest requestWithURL:url];
         [fetchEventRequest setDelegate:self];
         [fetchEventRequest setRequestMethod:@"GET"];
@@ -299,12 +319,11 @@
 }
 
 
-
 - (void)requestFinished:(ASIHTTPRequest *)request
 {
     NSString *response = [request responseString];
     id respJSON = [response JSONValue];
-    //NSLog(@"RESP : %@",respJSON);
+    NSLog(@"RESP HomeVC: %@",respJSON);
     if (request == fetchuserRequest) {
         appDelegate.userDictionary = [NSMutableDictionary dictionaryWithDictionary:respJSON];
     }

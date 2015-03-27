@@ -319,7 +319,7 @@
                             CLIENT_ID,
                             CLIENT_SECRET,
                             CLIENT_PLATFORM] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-            NSLog(@"URL : %@",url);
+            NSLog(@"URL from LOGIN: %@",url);
             ASIFormDataRequest *request=[ASIFormDataRequest requestWithURL:url];
             request.tag = ASIHttpRequestTagLogin;
             [request setDelegate:self];
@@ -339,7 +339,7 @@
         case ASIHttpRequestTagFBLogin:{
             NSString *response = [request responseString];
             id respJSON = [response JSONValue];
-            //NSLog(@"RESP : %@",respJSON);
+            NSLog(@"RESP FROM LOGIN: %@",respJSON);
             if ([respJSON isKindOfClass:[NSDictionary class]]) {
                 NSString *result = [respJSON valueForKey:@"result"];
                 int success = [[respJSON valueForKey:@"success"] integerValue];

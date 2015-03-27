@@ -8,14 +8,29 @@
 
 #import "RCFlagViewController.h"
 #import "RCHomeViewController.h"
-@interface RCFlagViewController ()
+#import "RCMotionDetector.h"
+
+#import "RCAlertView.h"
+
+#define kCMDeviceMotionUpdateFrequency (1.f/30.f)
+
+@interface RCFlagViewController () <RCMotionDetectorDelegate>
+{
+    NSTimer *trackingTimer;
+}
+
+@property (weak, nonatomic) IBOutlet UILabel *speedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *isShakingLabel;
+@property (strong, nonatomic) IBOutlet UIView *popUpView;
+@property (strong, nonatomic) IBOutlet UIButton *alrightBtn;
+
+- (IBAction)alrightBtnPressed:(id)sender;
 
 @end
 
+
 @implementation RCFlagViewController
-@synthesize currentFlags;
-@synthesize homeViewController;
-@synthesize trackId,eventId;
+@synthesize currentFlags, homeViewController, trackId, eventId;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,7 +44,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    [self initDetection];
+    
     appDelegate = (RCAppDelegate*)[[UIApplication sharedApplication] delegate];
     //lblMessage.text = NSLocalizedString(@"FETCH_TRACK",nil);
     flagsView.backgroundColor = [UIColor clearColor];
@@ -42,9 +59,11 @@
     } else {
         lblMessage.hidden = YES;
     }
-    trackingTimer = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(sendTracking:) userInfo:nil repeats:YES];
+    trackingTimer = [NSTimer scheduledTimerWithTimeInterval:2.0f target:self selector:@selector(sendTracking:) userInfo:nil repeats:YES];
     [self showFlags:self.currentFlags];
+    
 }
+
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -59,11 +78,25 @@
     [UIApplication sharedApplication].idleTimerDisabled = YES;
 }
 
+
 -(void)viewWillDisappear:(BOOL)animated
 {
     [self unregisterForNotifications];
     [UIApplication sharedApplication].idleTimerDisabled = NO;
+    [self stopTracking];
 }
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self startTracking];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [self resignFirstResponder];
+}
+
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
@@ -72,6 +105,7 @@
 
 - (void)didReceiveMemoryWarning
 {
+    [self stopTracking];
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -108,6 +142,7 @@
         double speed = appDelegate.location.speed;//meters per second.
         speed = speed * 0.000621371;//miles per second
         speed = speed / (60*60);//miles per hour
+        
         
         NSString *url = [NSString stringWithFormat:@"%@?userID=%@&eventID=%@&trackID=%@&lon=%lf&lat=%lf&speed=%lf&dateEpochMillis=%.0lf",
                         API_TRACK_FEEDS,
@@ -331,7 +366,7 @@
     int yGap = 5;
     float height = (flagsView.frame.size.height-yGap)/2;
     NSDictionary *globalFlag = [flag valueForKey:@"globalMessage"];
-    
+    NSLog(@"globalFlag=%@", globalFlag.description);
     
     if (globalFlag) {
         RCFlagView *globalFlagView = [[RCFlagView alloc] initWithFrame:CGRectMake(xGap, 0, flagsView.frame.size.width-xGap*2, height)];
@@ -523,8 +558,66 @@
     [self.navigationController popToViewController:self.homeViewController animated:YES];
 }
 
-#pragma mark
-#pragma mark -Orientation Handling
+
+#pragma mark - init Detection
+#pragma mark Speed Handling
+
+- (void)initDetection {
+    
+    __weak RCFlagViewController *weakSelf = self;
+    weakSelf.popUpView.layer.cornerRadius = 5.0f;
+    weakSelf.popUpView.clipsToBounds = YES;
+    weakSelf.alrightBtn.layer.borderColor = [UIColor orangeColor].CGColor;
+    weakSelf.alrightBtn.layer.borderWidth = 2.0f;
+    weakSelf.alrightBtn.layer.cornerRadius = 5.0f;
+    weakSelf.alrightBtn.clipsToBounds = YES;
+    
+    [RCMotionDetector sharedInstance].locationChangedBlock = ^(CLLocation *location) {
+        weakSelf.speedLabel.text = [NSString stringWithFormat:@"%.2f km/h",[RCMotionDetector sharedInstance].currentSpeed * 3.6f];
+    };
+    
+    [weakSelf.popUpView setHidden:YES];
+    [RCMotionDetector sharedInstance].accelerationChangedBlock = ^(CMAcceleration acceleration) {
+        BOOL isShaking = [RCMotionDetector sharedInstance].isShaking;
+        weakSelf.isShakingLabel.text = isShaking ? @"shaking" : @"not shaking";
+        if (isShaking) {
+            [weakSelf.popUpView setHidden:NO];
+            [weakSelf.speedLabel setHidden:YES];
+            [weakSelf.isShakingLabel setHidden:NO];
+        } else {
+            [weakSelf.speedLabel setHidden:NO];
+            [weakSelf.isShakingLabel setHidden:YES];
+        }
+    };
+    
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
+        [RCMotionDetector sharedInstance].useM7IfAvailable = YES; //Use M7 chip if available, otherwise use lib's algorithm
+    }
+}
+
+- (void)showAlert {
+    
+}
+
+- (void)showAlertWithText:(NSString*)text title:(NSString*)title {
+    [RCAlertView showWithTitle:title andText:text andFirstButtonTitle:@"OK" andSecondButtonTitle:nil andPrompt:nil andCompletionHandler:^(NSInteger clickedButtonIndex, NSString *promptString) {
+        
+    }];
+}
+
+
+- (void) startTracking {
+    printf("[StartTracking]\n");
+    [[RCMotionDetector sharedInstance] startDetection];
+}
+
+- (void) stopTracking {
+    printf("[StopTracking]\n");
+    [[RCMotionDetector sharedInstance] stopDetection];
+}
+
+
+#pragma mark - Orientation Handling
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -563,4 +656,8 @@
 }
 
 
+- (IBAction)alrightBtnPressed:(id)sender {
+    printf("alrightBtnPressed\n");
+    [self.popUpView setHidden:YES];
+}
 @end

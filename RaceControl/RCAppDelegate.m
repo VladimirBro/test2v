@@ -21,7 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-//    [NewRelicAgent startWithApplicationToken:@"be32e34d5441fd5451a9a45e21ef6e370102c5ec"];
+    [NewRelicAgent startWithApplicationToken:@"be32e34d5441fd5451a9a45e21ef6e370102c5ec"];
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
@@ -237,11 +237,12 @@
 
 
 #pragma mark -
-#pragma mark Location Manager functions
+
+#pragma mark - Location Manager functions
 
 - (void)startStandardUpdates {
     self.locationMgr.delegate = self;
-    self.locationMgr.distanceFilter = 20000000;
+    self.locationMgr.distanceFilter = 50000;
     
     if ([self.locationMgr respondsToSelector:@selector(requestWhenInUseAuthorization)])
         [self.locationMgr requestWhenInUseAuthorization];

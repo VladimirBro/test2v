@@ -187,6 +187,19 @@
 		FE0725401AC196E500F56D49 /* CustomHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE07253F1AC196E500F56D49 /* CustomHeaderCell.m */; };
 		FE2EA5231AC1AF4700889585 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2EA5221AC1AF4700889585 /* CustomCell.m */; };
 		FE3AC59C1AC219A200DBCF4E /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3AC59B1AC219A200DBCF4E /* arrow_right.png */; };
+		FE7D83CF1AC2F08300E6FE1E /* RCSettingsCustomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7D83CE1AC2F08300E6FE1E /* RCSettingsCustomVC.m */; };
+		FE7D83D71AC2FA4500E6FE1E /* facebookBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D83D11AC2FA4500E6FE1E /* facebookBtn.png */; };
+		FE7D83D81AC2FA4500E6FE1E /* facebookBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D83D21AC2FA4500E6FE1E /* facebookBtn@2x.png */; };
+		FE7D83D91AC2FA4500E6FE1E /* mail-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D83D31AC2FA4500E6FE1E /* mail-icon.png */; };
+		FE7D83DA1AC2FA4500E6FE1E /* mail-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D83D41AC2FA4500E6FE1E /* mail-icon@2x.png */; };
+		FE7D83DB1AC2FA4500E6FE1E /* messagesBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D83D51AC2FA4500E6FE1E /* messagesBtn.png */; };
+		FE7D83DC1AC2FA4500E6FE1E /* messagesBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE7D83D61AC2FA4500E6FE1E /* messagesBtn@2x.png */; };
+		FE7D83DF1AC3068200E6FE1E /* RCDraw2D.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7D83DE1AC3068200E6FE1E /* RCDraw2D.m */; };
+		FE9AAE6B1AC55B540079FDD4 /* RCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9AAE6A1AC55B540079FDD4 /* RCLocationManager.m */; };
+		FE9AAE6E1AC55ED50079FDD4 /* RCMotionDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9AAE6D1AC55ED50079FDD4 /* RCMotionDetector.m */; };
+		FE9AAE711AC56B560079FDD4 /* DS-DIGI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = FE9AAE701AC56B560079FDD4 /* DS-DIGI.TTF */; };
+		FE9AAE761AC5717E0079FDD4 /* UIView+Localizable.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9AAE751AC5717E0079FDD4 /* UIView+Localizable.m */; };
+		FE9AAE791AC57D790079FDD4 /* RCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9AAE781AC57D790079FDD4 /* RCAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -529,6 +542,24 @@
 		FE2EA5211AC1AF4700889585 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		FE2EA5221AC1AF4700889585 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		FE3AC59B1AC219A200DBCF4E /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
+		FE7D83CD1AC2F08300E6FE1E /* RCSettingsCustomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSettingsCustomVC.h; sourceTree = "<group>"; };
+		FE7D83CE1AC2F08300E6FE1E /* RCSettingsCustomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSettingsCustomVC.m; sourceTree = "<group>"; };
+		FE7D83D11AC2FA4500E6FE1E /* facebookBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebookBtn.png; sourceTree = "<group>"; };
+		FE7D83D21AC2FA4500E6FE1E /* facebookBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebookBtn@2x.png"; sourceTree = "<group>"; };
+		FE7D83D31AC2FA4500E6FE1E /* mail-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mail-icon.png"; sourceTree = "<group>"; };
+		FE7D83D41AC2FA4500E6FE1E /* mail-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mail-icon@2x.png"; sourceTree = "<group>"; };
+		FE7D83D51AC2FA4500E6FE1E /* messagesBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messagesBtn.png; sourceTree = "<group>"; };
+		FE7D83D61AC2FA4500E6FE1E /* messagesBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messagesBtn@2x.png"; sourceTree = "<group>"; };
+		FE7D83DD1AC3068200E6FE1E /* RCDraw2D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDraw2D.h; sourceTree = "<group>"; };
+		FE7D83DE1AC3068200E6FE1E /* RCDraw2D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDraw2D.m; sourceTree = "<group>"; };
+		FE9AAE691AC55B540079FDD4 /* RCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLocationManager.h; sourceTree = "<group>"; };
+		FE9AAE6A1AC55B540079FDD4 /* RCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCLocationManager.m; sourceTree = "<group>"; };
+		FE9AAE6C1AC55ED50079FDD4 /* RCMotionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMotionDetector.h; sourceTree = "<group>"; };
+		FE9AAE6D1AC55ED50079FDD4 /* RCMotionDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCMotionDetector.m; sourceTree = "<group>"; };
+		FE9AAE701AC56B560079FDD4 /* DS-DIGI.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS-DIGI.TTF"; sourceTree = "<group>"; };
+		FE9AAE751AC5717E0079FDD4 /* UIView+Localizable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Localizable.m"; sourceTree = "<group>"; };
+		FE9AAE771AC57D790079FDD4 /* RCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCAlertView.h; sourceTree = "<group>"; };
+		FE9AAE781AC57D790079FDD4 /* RCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -631,10 +662,15 @@
 				C439D83F1993B72300BB3E82 /* RCSettingsViewController.m */,
 				FE07253B1AC17E2000F56D49 /* RCSettingsVC.h */,
 				FE07253C1AC17E2000F56D49 /* RCSettingsVC.m */,
+				FE7D83CD1AC2F08300E6FE1E /* RCSettingsCustomVC.h */,
+				FE7D83CE1AC2F08300E6FE1E /* RCSettingsCustomVC.m */,
+				FE9AAE681AC55B090079FDD4 /* MotionDetect */,
 				FE07253E1AC196E500F56D49 /* CustomHeaderCell.h */,
 				FE07253F1AC196E500F56D49 /* CustomHeaderCell.m */,
 				FE2EA5211AC1AF4700889585 /* CustomCell.h */,
 				FE2EA5221AC1AF4700889585 /* CustomCell.m */,
+				FE7D83DD1AC3068200E6FE1E /* RCDraw2D.h */,
+				FE7D83DE1AC3068200E6FE1E /* RCDraw2D.m */,
 				8B037CD51928B277000DE081 /* RCInviteFriendViewController.h */,
 				8B037CD61928B277000DE081 /* RCInviteFriendViewController.m */,
 				030FF27A18F3FE3800D0EA65 /* Main.storyboard */,
@@ -647,6 +683,7 @@
 		030FF26F18F3FE3800D0EA65 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FE9AAE6F1AC56B560079FDD4 /* Fonts */,
 				8B539F181A1A6BC6004115F0 /* checkbox_checked.png */,
 				8B539F191A1A6BC6004115F0 /* checkbox_checked@2x.png */,
 				8B539F1A1A1A6BC6004115F0 /* checkbox.png */,
@@ -1133,6 +1170,7 @@
 		03F0B6571918E145004D4AFC /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				FE7D83D01AC2FA4500E6FE1E /* sharedImg */,
 				C4492152199A051E00B3E0B2 /* email_login.png */,
 				C4492153199A051E00B3E0B2 /* email_login@2x.png */,
 				C4492154199A051E00B3E0B2 /* facebook_login.png */,
@@ -1190,6 +1228,41 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FE7D83D01AC2FA4500E6FE1E /* sharedImg */ = {
+			isa = PBXGroup;
+			children = (
+				FE7D83D11AC2FA4500E6FE1E /* facebookBtn.png */,
+				FE7D83D21AC2FA4500E6FE1E /* facebookBtn@2x.png */,
+				FE7D83D31AC2FA4500E6FE1E /* mail-icon.png */,
+				FE7D83D41AC2FA4500E6FE1E /* mail-icon@2x.png */,
+				FE7D83D51AC2FA4500E6FE1E /* messagesBtn.png */,
+				FE7D83D61AC2FA4500E6FE1E /* messagesBtn@2x.png */,
+			);
+			path = sharedImg;
+			sourceTree = "<group>";
+		};
+		FE9AAE681AC55B090079FDD4 /* MotionDetect */ = {
+			isa = PBXGroup;
+			children = (
+				FE9AAE691AC55B540079FDD4 /* RCLocationManager.h */,
+				FE9AAE6A1AC55B540079FDD4 /* RCLocationManager.m */,
+				FE9AAE6C1AC55ED50079FDD4 /* RCMotionDetector.h */,
+				FE9AAE6D1AC55ED50079FDD4 /* RCMotionDetector.m */,
+				FE9AAE751AC5717E0079FDD4 /* UIView+Localizable.m */,
+				FE9AAE771AC57D790079FDD4 /* RCAlertView.h */,
+				FE9AAE781AC57D790079FDD4 /* RCAlertView.m */,
+			);
+			name = MotionDetect;
+			sourceTree = "<group>";
+		};
+		FE9AAE6F1AC56B560079FDD4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FE9AAE701AC56B560079FDD4 /* DS-DIGI.TTF */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1245,6 +1318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7D83D71AC2FA4500E6FE1E /* facebookBtn.png in Resources */,
 				C449214D1999FFB800B3E0B2 /* spotter_button@2x.png in Resources */,
 				C42F85281993781000FDB422 /* Default@2x.png in Resources */,
 				C44082FD1993B09C009F701B /* settings_icon.png in Resources */,
@@ -1258,14 +1332,17 @@
 				C45CA9261998F57300917EFB /* spotter_logo@2x.png in Resources */,
 				8B06EC0719459D4000BC7C93 /* icon-120.png in Resources */,
 				03F0B65B1918E14E004D4AFC /* refresh_button@2x.png in Resources */,
+				FE7D83DA1AC2FA4500E6FE1E /* mail-icon@2x.png in Resources */,
 				03DDF84D18FFB7F600EEB4E4 /* finish_flag.png in Resources */,
 				03F0B65A1918E14E004D4AFC /* refresh_button.png in Resources */,
 				8B06EC0D19459D4000BC7C93 /* Icon-iOS7-Spotlight@2x.png in Resources */,
 				030FF2D218F4147900D0EA65 /* Localizable.strings in Resources */,
+				FE7D83D91AC2FA4500E6FE1E /* mail-icon.png in Resources */,
 				03F0B6611918E2CB004D4AFC /* status_connected_icon@2x.png in Resources */,
 				C4492159199A051E00B3E0B2 /* facebook_login@2x.png in Resources */,
 				8B539F1F1A1A6BC6004115F0 /* checkbox@2x.png in Resources */,
 				C4492151199A015D00B3E0B2 /* facebook_login@2x.jpg in Resources */,
+				FE9AAE711AC56B560079FDD4 /* DS-DIGI.TTF in Resources */,
 				03EB37CD191A55F000BFE2F5 /* close@2x.png in Resources */,
 				FE3AC59C1AC219A200DBCF4E /* arrow_right.png in Resources */,
 				03DDF84E18FFB7F600EEB4E4 /* restart_flag.png in Resources */,
@@ -1283,6 +1360,8 @@
 				03EB37CF191A565D00BFE2F5 /* close.png in Resources */,
 				8B539F1D1A1A6BC6004115F0 /* checkbox_checked@2x.png in Resources */,
 				03F0B6701918FAD1004D4AFC /* announcement_icon.png in Resources */,
+				FE7D83DB1AC2FA4500E6FE1E /* messagesBtn.png in Resources */,
+				FE7D83D81AC2FA4500E6FE1E /* facebookBtn@2x.png in Resources */,
 				C42F85271993781000FDB422 /* Default.png in Resources */,
 				8B06EC1119459D4000BC7C93 /* Icon-Small@2x.png in Resources */,
 				030FF27318F3FE3800D0EA65 /* InfoPlist.strings in Resources */,
@@ -1311,6 +1390,7 @@
 				03F0B6721918FAD1004D4AFC /* no_announcements_icon.png in Resources */,
 				8B06EC0819459D4000BC7C93 /* Icon-iOS7-iPad.png in Resources */,
 				C45CA9251998F57300917EFB /* spotter_logo.png in Resources */,
+				FE7D83DC1AC2FA4500E6FE1E /* messagesBtn@2x.png in Resources */,
 				8B06EC0B19459D4000BC7C93 /* Icon-iOS7-iPhone@2x.png in Resources */,
 				03EB37D7191A575100BFE2F5 /* spotter_icon@2x.png in Resources */,
 			);
@@ -1357,6 +1437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				030FF3A418F4168F00D0EA65 /* NSDate+PNAdditions.m in Sources */,
+				FE9AAE761AC5717E0079FDD4 /* UIView+Localizable.m in Sources */,
 				030FF39318F4168F00D0EA65 /* PNTimeTokenResponseParser.m in Sources */,
 				030FF38D18F4168F00D0EA65 /* PNErrorResponseParser.m in Sources */,
 				030FF3A318F4168F00D0EA65 /* NSData+PNAdditions.m in Sources */,
@@ -1381,8 +1462,10 @@
 				031E575718F90EC40065CC75 /* JSONKit.m in Sources */,
 				030FF3BA18F4168F00D0EA65 /* PNConnection.m in Sources */,
 				8B69C332192546BE004BC5CF /* RCFacebookSignUpViewController.m in Sources */,
+				FE7D83DF1AC3068200E6FE1E /* RCDraw2D.m in Sources */,
 				0324C65218F44E04001D5CAA /* SBJsonWriter.m in Sources */,
 				030FF2C818F4087B00D0EA65 /* ASIDownloadCache.m in Sources */,
+				FE7D83CF1AC2F08300E6FE1E /* RCSettingsCustomVC.m in Sources */,
 				030FF2C618F4087B00D0EA65 /* ASIDataCompressor.m in Sources */,
 				03B0F44C190BC585005CC530 /* RCHomeViewController.m in Sources */,
 				030FF3AE18F4168F00D0EA65 /* PNLeaveRequest.m in Sources */,
@@ -1401,12 +1484,14 @@
 				030FF38718F4168F00D0EA65 /* PNPresenceEvent.m in Sources */,
 				03D887CF1916274800898F5F /* IAPSupport.m in Sources */,
 				FE07253D1AC17E2000F56D49 /* RCSettingsVC.m in Sources */,
+				FE9AAE791AC57D790079FDD4 /* RCAlertView.m in Sources */,
 				030FF39D18F4168F00D0EA65 /* PNMessage.m in Sources */,
 				030FF3A618F4168F00D0EA65 /* NSMutableArray+PNAdditions.m in Sources */,
 				030FF3B218F4168F00D0EA65 /* PNPushNotificationsRemoveRequest.m in Sources */,
 				03EB37C7191A509B00BFE2F5 /* RCSplashViewController.m in Sources */,
 				FE0725401AC196E500F56D49 /* CustomHeaderCell.m in Sources */,
 				030FF39018F4168F00D0EA65 /* PNPushNotificationsEnabledChannelsParser.m in Sources */,
+				FE9AAE6E1AC55ED50079FDD4 /* RCMotionDetector.m in Sources */,
 				031E575A18F91BC20065CC75 /* RCFlagView.m in Sources */,
 				030FF38618F4168F00D0EA65 /* PNChannelPresence.m in Sources */,
 				030FF2A618F4052900D0EA65 /* SVProgressHUD.m in Sources */,
@@ -1417,6 +1502,7 @@
 				030FF2CA18F4087C00D0EA65 /* ASIHTTPRequest.m in Sources */,
 				030FF27918F3FE3800D0EA65 /* RCAppDelegate.m in Sources */,
 				030FF39918F4168F00D0EA65 /* PNDate.m in Sources */,
+				FE9AAE6B1AC55B540079FDD4 /* RCLocationManager.m in Sources */,
 				030FF2C718F4087B00D0EA65 /* ASIDataDecompressor.m in Sources */,
 				030FF3B018F4168F00D0EA65 /* PNMessagePostRequest.m in Sources */,
 				C439D8401993B72300BB3E82 /* RCSettingsViewController.m in Sources */,

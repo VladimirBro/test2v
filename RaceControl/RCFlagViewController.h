@@ -34,12 +34,13 @@
     NSDictionary *currentFlags;
     BOOL isFlashing;
     BOOL isWaving;
-    NSTimer *trackingTimer;
 }
+
 @property(nonatomic,retain) NSString *trackId;
 @property(nonatomic,retain) NSString *eventId;
 @property(nonatomic,retain) NSDictionary *currentFlags;
 @property(nonatomic,retain) RCHomeViewController *homeViewController;
+
 -(void)sendTracking:(NSTimer *)timer;
 
 @end

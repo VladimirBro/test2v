@@ -14,8 +14,10 @@
 @interface RCSettingsVC ()
 
 @property (weak, nonatomic) IBOutlet UIButton *logoutBtn;
+@property (weak, nonatomic) IBOutlet UINavigationItem *editBtn;
 
 - (IBAction)logoutBtnPressed:(id)sender;
+//- (IBAction)editBtnPressed:(id)sender;
 
 @end
 
@@ -27,6 +29,9 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
     _logoutBtn.layer.cornerRadius = 5.0;
     _logoutBtn.clipsToBounds = YES;
     
@@ -143,6 +148,11 @@
 }
 
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+
 #pragma mark
 
 - (void)showMailVC
@@ -228,9 +238,21 @@
 }
 */
 
-#pragma mark - Actions
+#pragma mark - Handler Actions
 
 - (IBAction)logoutBtnPressed:(id)sender {
 }
+
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+    [super setEditing:editing animated:YES];
+    if (editing == YES) {
+        
+    } else {
+        
+    }
+}
+
 
 @end

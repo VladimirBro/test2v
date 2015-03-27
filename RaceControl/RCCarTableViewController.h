@@ -14,6 +14,7 @@
 
 @class RCHomeViewController;
 
+
 @interface RCCarTableViewController : UITableViewController
 {
     NSMutableDictionary *userData;
@@ -24,7 +25,9 @@
     IBOutlet UIButton *btnDone;
     BOOL isFromSettings;
 }
+
 @property(nonatomic,retain) NSMutableDictionary *userData;
 @property(assign) BOOL isFromSettings;
 @property(nonatomic,retain) RCHomeViewController *homeViewController;
+
 @end

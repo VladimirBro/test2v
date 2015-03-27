@@ -84,7 +84,7 @@
 #define SEGUE_ID_SettingsFromHome       @"PushHomeToSettings"
 #define SEGUE_ID_CarFromFBSignUp        @"PushCarFromFBSignUp"
 #define SEGUE_ID_CarFromSignUp          @"PushCarFromSignUp"
-#define SEGUE_ID_CarFromHome            @"PushCarFromHome"
+#define SEGUE_ID_CarFromHome            @"PushHomeToSettings" // @"PushCarFromHome"
 #define SEGUE_ID_FlagFromCar            @"PushFlagFromCar"
 #define SEGUE_ID_CarFromSettings        @"PushCarFromSettings"
 
@@ -107,7 +107,7 @@
 #define SKU_YEARLY @"oneyear"
 
 // distance radius
-#define DISTANCE_RADIUS @"20000" //DISTANCE_RADIUS @"50"
+#define DISTANCE_RADIUS @"1000" //DISTANCE_RADIUS @"50"
 
 // Color
 #define grayColor           [[UIColor lightGrayColor] CGColor]

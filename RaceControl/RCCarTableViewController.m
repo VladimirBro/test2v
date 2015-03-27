@@ -9,17 +9,24 @@
 #import "RCCarTableViewController.h"
 #import "RCHomeViewController.h"
 
-@interface RCCarTableViewController (){
+
+@interface RCCarTableViewController ()
+{
     NSInteger numberOfSection;
 }
+
 @property (strong, nonatomic) IBOutlet UIButton *saftyVehicalButton;
+
 - (IBAction)saftyVehicalButtonTouched:(id)sender;
+
 @end
+
 
 @implementation RCCarTableViewController
 @synthesize userData;
 @synthesize isFromSettings;
 @synthesize homeViewController;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +36,7 @@
     }
     return self;
 }
+
 
 - (void)viewDidLoad
 {
@@ -40,7 +48,7 @@
     [btnDone setTitleColor:YELLOW_COLOR forState:UIControlStateNormal];
     [btnDone setTitleColor:YELLOW_COLOR forState:UIControlStateHighlighted];
     btnDone.layer.cornerRadius = 5.0;
-
+    btnDone.clipsToBounds = YES;
     
     if (self.isFromSettings) {
         RCAppDelegate *appDelegate = (RCAppDelegate*)[[UIApplication sharedApplication] delegate];
@@ -59,11 +67,12 @@
     }
 }
 
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
 
 - (IBAction)hideKeyboard:(id)sender
 {
@@ -72,6 +81,7 @@
         [txtCarNo resignFirstResponder];
     }
 }
+
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -137,6 +147,7 @@
     
 }
 
+
 - (void)requestFailed:(ASIHTTPRequest *)request
 {
     [SVProgressHUD dismiss];
@@ -188,6 +199,7 @@
     }
 }
 
+
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -204,12 +216,14 @@
 }
 
 
-#pragma mark - TableView
+#pragma mark - TableView Delegates
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
     return numberOfSection;
 }
+
 
 - (IBAction)saftyVehicalButtonTouched:(id)sender {
     UIButton *button = (UIButton *) sender;
@@ -230,6 +244,5 @@
          /* TODO: Whatever you want here */
      }];
 }
-
 
 @end

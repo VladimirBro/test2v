@@ -11,7 +11,7 @@
 
 @import MessageUI;
 
-@interface RCSettingsVC : UIViewController <UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate >
+@interface RCSettingsVC : UIViewController <UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate, UITextFieldDelegate>
 {
     
     IBOutlet UITableView *myTableView;
